@@ -1,0 +1,49 @@
+<div class="flex flex-col min-h-screen bg-neutral">
+  <app-navbar-mobile class="w-full lg:hidden" />
+  <section class="flex flex-col grow w-full py-2 px-10 gap-10 mt-15 md:px-20 lg:hidden">
+    <div class="w-full flex justify-center">
+      <h2 class="font-bold text-2xl">Iniciar Sesión</h2>
+    </div>
+    <form class="flex flex-col gap-y-5">
+      <div class="relative">
+        <input type="email" id="email" placeholder=""
+          class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
+        <label for="email"
+          class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2">
+          <svg lucideMail class="w-5 h-5"></svg>
+          Dirección de email
+        </label>
+      </div>
+      <div class="relative">
+        <input [type]="showPassword() ? 'text' : 'password' " id="password" placeholder=""
+          class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
+        <label for="password"
+          class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2">
+          <svg lucideMail class="w-5 h-5"></svg>
+          Contraseña
+        </label>
+        <button (click)="changeVisibility()" type="button" class="absolute bottom-1 right-0">
+          @if(showPassword()){
+          <svg lucideEye></svg>
+          }@else{
+          <svg lucideEyeOff></svg>
+          }
+        </button>
+      </div>
+      <div class="w-full">
+        <button class="w-full flex flex-row justify-center mt-5 gap-2 bg-primary text-neutral rounded-2xl p-2">Ingresar
+          <svg lucideFlame></svg></button>
+      </div>
+    </form>
+    <div class="flex flex-row justify-between w-full text-sm">
+      <a routerLink="/register" class="text-primary font-semibold">Crear cuenta</a>
+      <a class="text-primary/70">Olvidé la contraseña</a>
+    </div>
+    <div class="flex items-center w-full">
+      <span class="grow border-t border-primary/30"></span>
+      <p class="px-4 text-sm text-primary/70 font-medium">o continúa con</p>
+      <span class="grow border-t border-primary/30"></span>
+    </div>
+  </section>
+  <app-footer class="w-full" />
+</div>

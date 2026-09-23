@@ -1,3 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@theme {
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+
+  --color-primary: #2B2620;
+  --color-secondary: #C5A059;
+  --color-tertiary: #D99B82;
+  --color-header: #fcf8f0;
+  --color-inputs: #f1ede6;
+  --color-neutral: #F7F3EB;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-primary bg-neutral;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-primary;
+  }
+}
