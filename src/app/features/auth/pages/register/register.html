@@ -1,1 +1,32 @@
-<p>register works!</p>
+<div class="flex flex-col min-h-screen">
+    <app-navbar-mobile class="w-full lg:hidden" />
+    <section class="grow flex flex-col justify-start py-2 px-10 gap-5 mt-15 md:px-20 lg:hidden">
+        <div class="w-full flex justify-center">
+        <h2 class="font-bold text-2xl">Crea una cuenta nueva</h2>
+        </div>
+        <form class="flex flex-col gap-y-5 my-5">
+            <div class="relative ">
+                <input type="email" id="email" placeholder="" class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
+                <label for="email" class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2"><svg lucideMail class="w-5 h-5"></svg>Dirección de email</label>
+            </div>
+            <div class="relative">
+                <input type="number" id="phone" placeholder="" class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
+                <label for="phone" class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2"><svg lucidePhone class="w-5 h-5"></svg>Numero de telefono</label>
+            </div>
+            <div class="relative">
+                <input type="password" id="password" placeholder="" class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
+                <label for="password" class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2"><svg lucideKey class="w-5 h-5"></svg>Contraseña</label>
+            </div>
+            <div class="w-full">
+                <button class="w-full flex flex-row justify-center items-center mt-5 gap-3 bg-primary text-neutral rounded-2xl p-2">Crear Cuenta<svg lucideUserRoundPlus class="h-5 w-5"></svg></button>
+            </div>
+        </form>
+        <div class="flex items-center w-full">
+            <span class="grow border-t border-primary/30"></span><p class="px-4 text-sm text-primary/70 font-medium">o regístrate con</p><span class="grow border-t border-primary/30"></span>
+        </div>
+    </section>
+    <div class="mb-10 w-full flex justify-center">
+        <p class="text-primary/70">¿Ya tienes una cuenta? <span routerLink="/login" class="text-primary font-semibold">Inicia sesión aquí</span></p>
+    </div>
+    <app-footer class="w-full" />
+</div>

@@ -6,22 +6,12 @@
     </div>
     <form class="flex flex-col gap-y-5">
       <div class="relative">
-        <input type="email" id="email" placeholder=""
-          class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
-        <label for="email"
-          class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2">
-          <svg lucideMail class="w-5 h-5"></svg>
-          Dirección de email
-        </label>
+        <input type="email" id="email" placeholder="" class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
+        <label for="email" class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2"> <svg lucideMail class="w-5 h-5"></svg> Dirección de email </label>
       </div>
       <div class="relative">
-        <input [type]="showPassword() ? 'text' : 'password' " id="password" placeholder=""
-          class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
-        <label for="password"
-          class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2">
-          <svg lucideMail class="w-5 h-5"></svg>
-          Contraseña
-        </label>
+        <input [type]="showPassword() ? 'text' : 'password' " id="password" placeholder="" class="peer w-full border-b border-primary bg-transparent px-0 pb-0 pt-5 text-primary outline-none focus:border-secondary">
+        <label for="password" class="pointer-events-none absolute left-0 top-4 text-gray-400 transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-xs flex items-center gap-2"><svg lucideKey class="w-5 h-5"></svg>Contraseña</label>
         <button (click)="changeVisibility()" type="button" class="absolute bottom-1 right-0">
           @if(showPassword()){
           <svg lucideEye></svg>
