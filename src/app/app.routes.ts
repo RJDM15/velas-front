@@ -5,6 +5,7 @@ import { Home } from './features/home/home';
 import { Collections } from './features/collections/collections';
 import { Custom } from './features/custom/custom';
 import { Agent } from './features/agent/agent';
+import { ShoppingCart } from './features/shopping-cart/shopping-cart';
 
 export const routes: Routes = [
     {
@@ -50,6 +51,10 @@ export const routes: Routes = [
     {
         path: 'agent',
         component: Agent
+    },
+    {
+        path: 'shopping-cart',
+        component: ShoppingCart
     },
     {
         path: '**',
