@@ -1,0 +1,10 @@
+<div #menu class="fixed inset-0 bg-header flex flex-col z-999 overflow-hidden">
+    <div class="w-full p-2 pr-6 min-h-20 flex justify-end items-center">
+        <svg (click)="onClose()" lucideX class="w-8 h-8 text-red-600"></svg>
+    </div>
+    <div class="w-full flex flex-col justify-center items-center gap-y-5">
+        @for(link of linkCollection; track link.id ){
+            <a [routerLink]="link.route">{{link.name}}</a>
+        }
+    </div>
+</div>

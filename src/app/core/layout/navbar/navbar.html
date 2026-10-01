@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<nav class="flex flex-row w-full p-2 bg-header shadow-md rounded-b-2xl">
+    <div>
+        <img routerLink="/home" src="/img/core/mobile-logo.png"  alt="img">
+    </div>
+    <div class="grow flex flex-row justify-end pr-5 pt-1 items-center gap-x-8 ">
+        <svg routerLink="/shopping-cart" lucideShoppingBag class="w-7 h-7 text-primary "></svg>
+        <svg lucideMenu (click)="handleOpenMenu()" class="w-7 h-7 text-primary "></svg>
+    </div>
+    @if(isOpen()){
+        <app-navbar-mobile (closeMenu)="isOpen.set(false)" class="md:hidden"/>
+    }
+
+</nav>
