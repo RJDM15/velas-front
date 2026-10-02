@@ -38,22 +38,34 @@ export class NavbarMobile {
     {
       id: "0",
       name: "Perfil",
-      route: "/login"
+      tag: "Tu espacio",
+      description: "Pedidos, aromas favoritos y recompensas exclusivas.",
+      route: "/login",
+      image: "/img/core/vela.webp"
     },
     {
       id: "1",
       name: "Colecciones",
-      route: "/collections"
+      tag: "Catálogo",
+      description: "Aromas para cada momento y temporada.",
+      route: "/collections",
+      image: "/img/core/halloween.webp"
     },
     {
       id: "2",
-      name: "Personaliza tu pedido",
-      route: "/custom"
+      name: "Personaliza",
+      tag: "Crea tu vela",
+      description: "Diseña tu pedido a tu gusto y estilo.",
+      route: "/custom",
+      image: "/img/core/editor.webp"
     },
     {
       id: "3",
-      name: "Ayuda!",
-      route: "/agent"
+      name: "Ayuda",
+      tag: "Centro de atención",
+      description: "Resolvemos todas tus dudas al instante.",
+      route: "/agent",
+      image: "/img/core/auxiliar.webp"
     },
   ]
 
